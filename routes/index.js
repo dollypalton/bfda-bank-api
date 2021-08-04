@@ -1,6 +1,6 @@
 const { Router } = require("express")
-const deleteCustomer = require("../controllers/deleteCustomer")
-const userBalance = require("../controllers/userBalance")
+const deleteCustomer = require("./deleteCustomer")
+const userBalance = require("./userBalance")
 const auth = require("./auth")
 
 const pageRoute = Router()

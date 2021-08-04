@@ -19,13 +19,5 @@
     "userRole": "customer",
     "accountType": "savings",
     "accountBalance": 500000
-  },
-  {
-    "username": "malik",
-    "email": "malik@gmail.com",
-    "password": "$2a$10$V/51cducTrrQqFW2uLj/LuUqPDfYprfsLFCpVkHz0TJjLYXEVCj6G",
-    "userRole": "customer",
-    "accountType": "savings",
-    "accountBalance": 20550250
   }
 ]

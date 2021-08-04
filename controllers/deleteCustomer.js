@@ -33,7 +33,7 @@ const deleteCustomer = (req, res) => {
     if (!ispasswordvalid) return res.status(421).json({ message: "Input correct password" })
 
     if (user.userRole !== "admin") return res.status(401).json({
-        message: "user does not have access"
+        message: "user is not an admin"
     })
 
     const customer = dataStore.find(function ({ username }) {
@@ -43,13 +43,15 @@ const deleteCustomer = (req, res) => {
     if (!customer) return res.status(401).json({ message: "customer not found" })
 
     for (let index = 0; index < dataStore.length; index++) {
-        if (dataStore(i).username === customer.email) {
-            dataStore.splice(i, 1)
+        if (dataStore[index].username === customer.username) {
+            dataStore.splice(index, 1)
         }
 
     }
+
     fs.writeFileSync("datastore.json", JSON.stringify(dataStore, null, 2))
-    return res.status(200).json({ message: "user has been deleted successfully" })
+    return res.status(200).json({ message: "customer has been deleted successfully" })
 }
+
 
 module.exports = deleteCustomer
