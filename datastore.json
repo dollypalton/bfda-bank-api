@@ -1,0 +1,31 @@
+[
+  {
+    "username": "papatee",
+    "email": "papatee@gmail.com",
+    "password": "$2a$10$RcJ5pIoSiZlqYnDWgH1bS.XvSwuTGo9wY7b2kTfrnpxkRN27gpCrO",
+    "userRole": "customer"
+  },
+  {
+    "username": "adedolapo",
+    "email": "adedolapo@gmail.com",
+    "password": "$2a$10$36bT48PmwoFa18k01PkpiO4yFji67jLKwHpDWGJA7c/AU7hZ9nGwm",
+    "userRole": "admin",
+    "accountType": "savings"
+  },
+  {
+    "username": "wasiu",
+    "email": "wasiu@gmail.com",
+    "password": "$2a$10$LC6IlrLoOhLN1qlazbDM0OWRErIr5T7v3sMKv0EmR1aQsJGIHY9/O",
+    "userRole": "customer",
+    "accountType": "savings",
+    "accountBalance": 500000
+  },
+  {
+    "username": "malik",
+    "email": "malik@gmail.com",
+    "password": "$2a$10$V/51cducTrrQqFW2uLj/LuUqPDfYprfsLFCpVkHz0TJjLYXEVCj6G",
+    "userRole": "customer",
+    "accountType": "savings",
+    "accountBalance": 20550250
+  }
+]
