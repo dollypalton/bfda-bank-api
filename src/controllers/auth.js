@@ -44,7 +44,6 @@ const signUp = (req, res) => {
       expiresIn: "10m",
     }
   );
-  console.log(userData.userBalance);
 
   dataStore.push(userData);
   fs.writeFileSync("src/datastore.json", JSON.stringify(dataStore, null, 2));
