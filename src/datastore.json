@@ -27,5 +27,53 @@
     "userRole": "customer",
     "accountType": "savings",
     "accountBalance": 50
+  },
+  {
+    "username": "tommy",
+    "email": "tommy@gmail.com",
+    "password": "$2a$10$XaNoLOaIkg.pRnoEaiGQ6.oS889/lVh3kLnrSQH0Bc21LeHQHllkC",
+    "userRole": "customer",
+    "accountType": "savings",
+    "accountBalane": 0
+  },
+  {
+    "username": "esther",
+    "email": "esther@gmail.com",
+    "password": "$2a$10$b0PAnFeOBAZxjby/BE9zcu2MFxsfVPQcEL1q8zOjOxTyKfLBGwRpG",
+    "userRole": "customer",
+    "accountType": "savings",
+    "accountBalane": 0
+  },
+  {
+    "username": "esthe",
+    "email": "esthe@gmail.com",
+    "password": "$2a$10$dkyNVdYnrhGeCxtwJ.TAMO3EbVvIfqW4qTdLBz8Xr1is9bJetmwVS",
+    "userRole": "customer",
+    "accountType": "savings",
+    "accountBalance": 0
+  },
+  {
+    "username": "Yinka",
+    "email": "yinka@gmail.com",
+    "password": "$2a$10$uiCRbRbNcsIyzjsk.u4.auNB.EbpKJ6mzbX6IMELY3PNUCBE3DXh2",
+    "userRole": "customer",
+    "accountType": "savings",
+    "accountBalance": 0
+  },
+  {
+    "username": "Yink",
+    "email": "yink@gmail.com",
+    "password": "$2a$10$q21QY6gIJIQypejPx0boRe2mUIyu9SQw35pSl17qAbrL7M/0.950S",
+    "userRole": "customer",
+    "accountType": "savings",
+    "accountBalance": 0
+  },
+  {
+    "username": "Yin",
+    "email": "yin@gmail.com",
+    "password": "$2a$10$Sj3/9SqGInfOIWwaBqD88O1EgU7dc8PW7/Q682cwvIvE9UvkEjHk6",
+    "userRole": "customer",
+    "accountType": "savings",
+    "accountBalance": 501232000
   }
 ]

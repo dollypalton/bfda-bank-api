@@ -19,16 +19,16 @@ const signUp = (req, res) => {
       .status(401)
       .json({ message: "Please input username or password!" });
 
-  let userExist;
-  dataStore.forEach((user) => {
-    if (userData.username === user.username) {
-      userExist = true;
+  let user;
+  dataStore.forEach((customer) => {
+    if (userData.username === customer.username) {
+      user = true;
     } else {
-      userExist = false;
+      user = false;
     }
   });
 
-  if (userExist) {
+  if (user) {
     return res.status(201).json({
       message: "User already exists!",
     });
@@ -37,11 +37,21 @@ const signUp = (req, res) => {
   const hashedPassword = bcrypt.hashSync(userData.password);
   userData.password = hashedPassword;
 
+  const token = jwt.sign(
+    { user: userData.username, role: userData.accountBalance },
+    "RANDOM_TOKEN_SECRET",
+    {
+      expiresIn: "10m",
+    }
+  );
+  console.log(userData.userBalance);
+
   dataStore.push(userData);
   fs.writeFileSync("src/datastore.json", JSON.stringify(dataStore, null, 2));
 
   return res.status(200).json({
     message: "User registered succesfully!",
+    data: token,
   });
 };
 
@@ -69,9 +79,13 @@ const signIn = (req, res) => {
   if (!ispasswordvalid)
     return res.status(421).json({ message: "Input correct password" });
 
-  const token = jwt.sign({ user: userData.username }, "secret", {
-    expiresIn: "10m",
-  });
+  const token = jwt.sign(
+    { user: userData.username, role: user.userRole },
+    "RANDOM_TOKEN_SECRET",
+    {
+      expiresIn: "10m",
+    }
+  );
 
   return res.status(200).json({
     message: "Login Successful!",
