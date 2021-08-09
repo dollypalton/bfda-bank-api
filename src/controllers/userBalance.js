@@ -1,6 +1,6 @@
 // const express = require("express");
 // const jwt = require("jsonwebtoken");
-const bcrypt = require("bcryptjs");
+// const bcrypt = require("bcryptjs");
 const fs = require("fs");
 
 // const app = express();
@@ -14,30 +14,6 @@ const userBalance = (req, res) => {
   const userData = req.body;
 
   const dataStore = JSON.parse(fs.readFileSync("src/datastore.json"));
-
-  if (!userData.username || !userData.password)
-    return res
-      .status(401)
-      .json({ message: "Please input username or password!" });
-
-  const user = dataStore.find(function checkUsername({ username }) {
-    return username === userData.username;
-  });
-
-  if (!user) {
-    return res.status(401).json({
-      message: "User does not exists!",
-    });
-  }
-  const ispasswordvalid = bcrypt.compareSync(userData.password, user.password);
-
-  if (!ispasswordvalid)
-    return res.status(421).json({ message: "Input correct password" });
-
-  if (user.userRole !== "admin")
-    return res.status(401).json({
-      message: "user does not have access",
-    });
 
   const customer = dataStore.find(function checkUsername({ username }) {
     return username === userData.customer;
